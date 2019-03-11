@@ -1,5 +1,14 @@
 <template>
-  <div class="bugdetails">{{bug.description}}</div>
+  <div class="bugdetails">
+    <div class="row d-flex">
+      <div class="d-flex col-12 list-group">
+        <a
+          class="list-group-item list-group-item-action list-group-item-warning"
+        >{{bug.creator}} {{bug.title}} {{bug.description}}</a>
+        <!-- primary secondarydanger warning info light dark -->
+      </div>
+    </div>
+  </div>
 </template>
 
 

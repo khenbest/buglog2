@@ -45,6 +45,9 @@ export default {
   methods: {
     createBug() {
       this.$store.dispatch("createBug", this.newBug);
+    },
+    getBug() {
+      this.$store.dispatch("getBug");
     }
   },
   components: {}

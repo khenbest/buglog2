@@ -17,7 +17,7 @@ export default new Vuex.Store({
       state.bugs = data
     },
     activeBug(state, data) {
-      state.bug = data
+      state.bug.push(data)
     }
   },
   actions: {
@@ -35,11 +35,11 @@ export default new Vuex.Store({
           commit('setBugs', res.data.results)
         })
     },
-    getBug({ commit, dispatch }, payload) {
+    getBug({ commit, dispatch }) {
       api.get('', payload).then(res => {
         console.log(res)
         debugger
-        commit('activeBug', payload)
+        commit('activeBug')
       })
     }
   }
